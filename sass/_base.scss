@@ -24,6 +24,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 50%;
+  }
 }
 
 *,
@@ -50,4 +54,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5rem;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
 }

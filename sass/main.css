@@ -1,3 +1,19 @@
+/*
+0 - 375px           Small Phone
+375 - 600px:        Phone
+600 - 900px:        Tablet Portrait
+900 - 1200px:       Table Landscape
+1200 - 1800px:      Desktop (Current Styles)
+1800px + :          Big Desktop
+*/
+/*
+$breakpoint arguement choices: 
+- small phone
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 /*COLORS*/
 :root {
   --color-primary: #eb2f64;
@@ -21,6 +37,12 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 *,
@@ -50,24 +72,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5rem;
 }
 
-/*
-0 - 375px           Small Phone
-375 - 600px:        Phone
-600 - 900px:        Tablet Portrait
-900 - 1200px:       Table Landscape
-1200 - 1800px:      Desktop (Current Styles)
-1800px + :          Big Desktop
-*/
-/*
-$breakpoint arguement choices: 
-- small phone
-- phone
-- tab-port
-- tab-land
-- big-desktop
-*/
+@media only screen and (max-width: 75em) {
+  body {
+    padding: 0;
+  }
+}
+
 .logo {
   height: 3.25rem;
   margin-left: 2rem;
@@ -157,6 +170,24 @@ $breakpoint arguement choices:
           align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .user-nav > * {
+    padding: 0 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .user-nav > * {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .user-nav > * {
+    padding: 0 0.5rem;
+  }
+}
+
 .user-nav > *:hover {
   background-color: var(--color-grey-light-2);
 }
@@ -196,6 +227,24 @@ $breakpoint arguement choices:
   height: 3.75rem;
   border-radius: 50%;
   margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 26.25em) {
+  .user-nav__photo {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
+
+.user-nav__user-name {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 26.25em) {
+  .user-nav__user-name {
+    margin-right: 1rem;
+  }
 }
 
 .side-nav {
@@ -204,12 +253,41 @@ $breakpoint arguement choices:
   margin-top: 3.5rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .side-nav {
+    font-size: 1rem;
+  }
+}
+
 .side-nav__item {
   position: relative;
 }
 
 .side-nav__item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .side-nav__item::before {
@@ -254,11 +332,59 @@ $breakpoint arguement choices:
           align-items: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    padding: 1rem 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .side-nav__icon {
   width: 1.75rem;
   height: 1.75rem;
   margin-right: 2rem;
   fill: currentColor;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .side-nav__icon {
+    margin-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .side-nav__icon {
+    margin-right: 0;
+  }
 }
 
 .legal {
@@ -267,6 +393,12 @@ $breakpoint arguement choices:
   text-align: center;
   padding-inline: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .legal {
+    display: none;
+  }
 }
 
 .gallery {
@@ -298,6 +430,20 @@ $breakpoint arguement choices:
   padding: 1.5rem 3rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__heading {
+    font-size: 1.55rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .overview__heading {
+    font-size: 1.15rem;
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .overview__stars {
   margin-right: auto;
   display: -webkit-box;
@@ -309,6 +455,20 @@ $breakpoint arguement choices:
   width: 1.75rem;
   height: 1.75rem;
   fill: var(--color-primary);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .overview__icon-star, .overview__icon-location {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .overview__icon-star, .overview__icon-location {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 .overview__location {
@@ -323,6 +483,13 @@ $breakpoint arguement choices:
 
 .overview__icon-location {
   margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 26.25em) {
+  .overview__icon-location {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .overview__rating {
@@ -347,15 +514,34 @@ $breakpoint arguement choices:
           align-items: center;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__rating {
+    padding: 0 1rem;
+    margin-left: 1rem;
+  }
+}
+
 .overview__rating-average {
   font-size: 2.25rem;
   font-weight: 300;
   margin-bottom: -3px;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-average {
+    font-size: 1.75rem;
+  }
+}
+
 .overview__rating-count {
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .overview__rating-count {
+    font-size: 0.6rem;
+  }
 }
 
 .btn-inline {
@@ -368,6 +554,14 @@ $breakpoint arguement choices:
   background-color: transparent;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn-inline {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .btn-inline span {
@@ -437,6 +631,12 @@ $breakpoint arguement choices:
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .paragraph:not(:last-of-type) {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .list {
   list-style: none;
   margin: 3rem 0;
@@ -485,6 +685,12 @@ $breakpoint arguement choices:
   margin-right: auto;
 }
 
+.recommend__friends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .recommend__photo {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -498,20 +704,50 @@ $breakpoint arguement choices:
   margin-right: -1.5rem;
 }
 
+@media only screen and (max-width: 75em) {
+  .recommend__photo:not(:last-child) {
+    margin-right: -2rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .recommend__photo:not(:last-child) {
+    margin-right: -2rem;
+  }
+}
+
 .review {
   background-color: var(--color-white);
   -webkit-box-shadow: var(--shadow-light);
           box-shadow: var(--shadow-light);
   padding: 3rem;
-  margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .review {
+    padding: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .review {
+    padding: 2.5rem;
+    max-width: 40rem;
+  }
 }
 
 .review__text {
   margin-bottom: 2rem;
   z-index: 10;
   position: relative;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .review__text {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .review__user {
@@ -576,8 +812,34 @@ $breakpoint arguement choices:
   margin-bottom: 2.5rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .cta__book-now {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .cta__book-now {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .cta {
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .cta {
+    padding: 2rem;
+  }
+}
+
 .btn {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   border: none;
   text-transform: uppercase;
@@ -590,6 +852,12 @@ $breakpoint arguement choices:
   overflow: hidden;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .btn {
+    font-size: 0.9em;
+  }
+}
+
 .btn > * {
   display: inline-block;
   height: 100%;
@@ -600,6 +868,18 @@ $breakpoint arguement choices:
 
 .btn__visible {
   padding: 2rem 7.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .btn__visible {
+    padding: 1.75rem 7rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .btn__visible {
+    padding: 1.55rem 6rem;
+  }
 }
 
 .btn__invisible {
@@ -631,7 +911,7 @@ $breakpoint arguement choices:
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 140rem;
   margin-block: 8rem;
   background-color: var(--color-grey-light-1);
   -webkit-box-shadow: var(--shadow-dark);
@@ -641,6 +921,8 @@ $breakpoint arguement choices:
 @media only screen and (max-width: 75em) {
   .container {
     margin-block: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -661,10 +943,31 @@ $breakpoint arguement choices:
   padding-inline: 2rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header {
+    padding-inline: 1rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .header {
+    padding-inline: 0;
+  }
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .sidebar {
@@ -702,6 +1005,29 @@ $breakpoint arguement choices:
   border-bottom: var(--line-bottom);
 }
 
+@media only screen and (max-width: 56.25em) {
+  .detail {
+    gap: 3rem;
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .detail {
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
 .description {
   background-color: var(--color-white);
   -webkit-box-shadow: var(--shadow-light);
@@ -712,10 +1038,23 @@ $breakpoint arguement choices:
           flex: 0 0 60%;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .description {
+    padding: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .description {
+    padding: 2rem;
+  }
+}
+
 .user-reviews {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  gap: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,5 +1065,17 @@ $breakpoint arguement choices:
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .user-reviews {
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .user-reviews {
+    gap: 2rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
