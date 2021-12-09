@@ -23,6 +23,14 @@
 
   @include respond(tab-port) {
     padding-inline: 1rem;
+    padding-block: 1rem;
+  }
+
+  @include respond(phone) {
+    height: 12rem;
+    flex-wrap: wrap;
+
+    align-content: space-around;
   }
 
   @include respond(phone-small) {
