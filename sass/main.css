@@ -308,7 +308,7 @@ body {
 
 @media only screen and (max-width: 26.25em) {
   .side-nav {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -393,10 +393,6 @@ body {
 @media only screen and (max-width: 26.25em) {
   .side-nav__link:link, .side-nav__link:visited {
     padding: 1rem 0.5rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 
@@ -427,7 +423,7 @@ body {
 
 @media only screen and (max-width: 26.25em) {
   .side-nav__icon {
-    margin-right: 0;
+    display: none;
   }
 }
 

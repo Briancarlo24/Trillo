@@ -180,7 +180,7 @@
   }
 
   @include respond(phone-small) {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   &__item {
@@ -250,7 +250,6 @@
 
     @include respond(phone-small) {
       padding: 1rem 0.5rem;
-      flex-direction: column;
     }
   }
 
@@ -273,7 +272,7 @@
       margin-right: 0.75rem;
     }
     @include respond(phone-small) {
-      margin-right: 0;
+      display: none;
     }
   }
 }
