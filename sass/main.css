@@ -382,6 +382,93 @@ body {
   margin-right: 2rem;
 }
 
+.u-header {
+  padding: 0.5rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-grey-light-3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 0.5rem;
+}
+
+.u-header span {
+  font-size: 3rem;
+}
+
+.u-menu__container {
+  max-height: 60rem;
+  overflow-y: scroll;
+}
+
+.u-menu__box {
+  padding: 1rem 0 1rem 1.5rem;
+  width: 100%;
+}
+
+.u-menu__box:hover {
+  background-color: var(--color-grey-light-2);
+}
+
+.u-photo--circle {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.notification {
+  position: relative;
+}
+
+.notification-menu {
+  display: none;
+  position: absolute;
+  top: 95%;
+  left: -7.3rem;
+}
+
+.notification-menu:hover .notification-menu__menu {
+  display: block;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .notification-menu {
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .notification-menu {
+    left: -3.5rem;
+    width: 25rem;
+  }
+}
+
+.notification__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.notification__box-text {
+  padding-right: 0.5rem;
+}
+
+.notification:hover .notification-menu,
+.notification:active .notification-menu {
+  display: block;
+}
+
 .message {
   position: relative;
 }
@@ -391,10 +478,6 @@ body {
   position: absolute;
   top: 95%;
   left: -13.5rem;
-}
-
-.message-menu:hover .message-menu__menu {
-  display: block;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -434,26 +517,6 @@ body {
   outline: none;
 }
 
-.message-menu__header {
-  padding: 0.5rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--color-grey-light-3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  gap: 0.5rem;
-}
-
-.message-menu__header span {
-  font-size: 3rem;
-}
-
 .message-menu__button {
   border: none;
   background-color: var(--color-grey-light-2);
@@ -474,20 +537,6 @@ body {
   fill: var(--color-grey-dark-3);
 }
 
-.message-menu__container {
-  max-height: 60rem;
-  overflow-y: scroll;
-}
-
-.message-menu__friends {
-  padding: 1rem 0 1rem 1.5rem;
-  width: 100%;
-}
-
-.message-menu__friends:hover {
-  background-color: var(--color-grey-light-2);
-}
-
 .message:hover .message-menu,
 .message:active .message-menu {
   display: block;
@@ -501,13 +550,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: inherit;
-}
-
-.message .message-menu__user-photo {
-  height: 4.5rem;
-  width: 4.5rem;
-  border-radius: 50%;
-  margin-right: 1.5rem;
 }
 
 .message .message-menu__user-box {
@@ -774,6 +816,18 @@ body {
           transform: translateY(101%);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .gallery__caption {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 26.25em) {
+  .gallery__caption--1 {
+    font-size: 2rem;
+  }
 }
 
 .gallery__item:hover .gallery__caption {

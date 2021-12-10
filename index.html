@@ -32,53 +32,97 @@
         </form>
 
         <nav class="user-nav">
-          <div class="user-nav__icon-box user-nav__icon-box--1">
+          <!-- icon box 1 -->
+          <div class="user-nav__icon-box notification">
             <svg class="user-nav__icon">
               <use xlink:href="img/sprite.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
-            <div class="user-nav__user-menu">
-              <ul class="user-nav__list">
-                <li class="user-nav__item">
-                  <a href="#" class="user-nav__link">
-                    <svg class="user-nav__link-icon">
-                      <use xlink:href="img/sprite.svg#icon-user"></use>
-                    </svg>
-                    <span>View Profile</span>
-                  </a>
-                </li>
-                <li class="user-nav__item">
-                  <a href="#" class="user-nav__link">
-                    <svg class="user-nav__link-icon">
-                      <use xlink:href="img/sprite.svg#icon-cog"></use>
-                    </svg>
-                    <span>Settings</span>
-                  </a>
-                </li>
-                <li class="user-nav__item">
-                  <a href="#" class="user-nav__link">
-                    <svg class="user-nav__link-icon">
-                      <use xlink:href="img/sprite.svg#icon-phone"></use>
-                    </svg>
-                    <span>Support</span>
-                  </a>
-                </li>
-                <li class="user-nav__item">
-                  <a href="#" class="user-nav__link">
-                    <svg class="user-nav__link-icon">
-                      <use xlink:href="img/sprite.svg#icon-display"></use></svg
-                    ><span>Display</span>
-                  </a>
-                </li>
-                <li class="user-nav__item">
-                  <a href="#" class="user-nav__link">
-                    <svg class="user-nav__link-icon">
-                      <use xlink:href="img/sprite.svg#icon-exit"></use>
-                    </svg>
-                    <span>Logout</span>
-                  </a>
-                </li>
-              </ul>
+
+            <div class="notification-menu menu">
+              <div class="notification-menu__header u-header">
+                <span>Notifications</span>
+              </div>
+              <!-- NOTIFICATION MENU  -->
+              <div class="notification__container u-menu__container">
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-1.jpg"
+                    alt="User 1"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jonas sent you an invite!
+                  </p>
+                </figcaption>
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-6.jpg"
+                    alt="User 6"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jesse Morgan liked your message.
+                  </p>
+                </figcaption>
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-1.jpg"
+                    alt="User 1"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jonas sent you an invite!
+                  </p>
+                </figcaption>
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-1.jpg"
+                    alt="User 1"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jonas sent you an invite!
+                  </p>
+                </figcaption>
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-1.jpg"
+                    alt="User 1"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jonas sent you an invite!
+                  </p>
+                </figcaption>
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-6.jpg"
+                    alt="User 6"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jonas sent you an invite!
+                  </p>
+                </figcaption>
+                <!-- Notification message -->
+                <figcaption class="notification__box u-menu__box">
+                  <img
+                    src="img/user-7.jpg"
+                    alt="User 7"
+                    class="notification__box-photo u-photo--circle"
+                  />
+                  <p class="notification__box-text">
+                    Jonas sent you an invite!
+                  </p>
+                </figcaption>
+              </div>
             </div>
           </div>
           <!-- icon box 2 -->
@@ -89,7 +133,7 @@
             <span class="user-nav__notification">13</span>
             <!--  Message Window -->
             <div class="message-menu menu">
-              <div class="message-menu__header">
+              <div class="message-menu__header u-header">
                 <span>Messages</span>
                 <form action="#" class="message-menu__form">
                   <input
@@ -108,14 +152,14 @@
                 </form>
               </div>
 
-              <div class="message-menu__container">
+              <div class="message-menu__container u-menu__container">
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-1.jpg"
                       alt="User 1"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Jonas Schmedtmann</p>
@@ -126,12 +170,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-2.jpg"
                       alt="User 2"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Jane Doe</p>
@@ -142,12 +186,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-3.jpg"
                       alt="User 3"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Nick Young</p>
@@ -158,12 +202,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-4.jpg"
                       alt="User 4"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Jason Bourne</p>
@@ -172,12 +216,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-5.jpg"
                       alt="User 5"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Cris Cross</p>
@@ -188,12 +232,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-6.jpg"
                       alt="User 6"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Jesse Morgan</p>
@@ -202,12 +246,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-7.jpg"
                       alt="User 7"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Itachi</p>
@@ -216,12 +260,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-8.jpg"
                       alt="User 8"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Brian Carlo Birondo</p>
@@ -230,12 +274,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-9.jpg"
                       alt="User 9"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Christyl Mae</p>
@@ -247,12 +291,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-10.jpg"
                       alt="User 10"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Song Ji Hyo</p>
@@ -261,12 +305,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-11.jpg"
                       alt="User 11"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Catriona Grey</p>
@@ -277,12 +321,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-12.jpg"
                       alt="User 12"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Anime girl</p>
@@ -291,12 +335,12 @@
                   </figcaption>
                 </div>
                 <!-- friend message -->
-                <div class="message-menu__friends">
+                <div class="message-menu__friends u-menu__box">
                   <figcaption class="message-menu__user">
                     <img
                       src="img/user-13.jpg"
                       alt="User 13"
-                      class="message-menu__user-photo"
+                      class="message-menu__user-photo u-photo--circle"
                     />
                     <div class="message-menu__user-box">
                       <p class="message-menu__user-name">Nick Smith</p>
@@ -402,7 +446,9 @@
           <div class="gallery">
             <figure class="gallery__item">
               <img src="img/hotel-1.jpg" alt="Photo 1" class="gallery__photo" />
-              <figcaption class="gallery__caption">Most elegant</figcaption>
+              <figcaption class="gallery__caption gallery__caption--1">
+                Most elegant
+              </figcaption>
             </figure>
             <figure class="gallery__item">
               <img src="img/hotel-2.jpg" alt="Photo 2" class="gallery__photo" />
