@@ -209,9 +209,6 @@
     transform: scaleY(0);
     transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
       background-color 0.1s;
-
-    @include respond(phone) {
-    }
   }
 
   &__item:hover::before,
@@ -479,13 +476,18 @@
       margin-right: 0.7rem;
 
       //Older browsers
-      //   background-image: url(../img/chevron-thin-right.svg);
-      //   background-size: cover;
+      background-image: url(../img/chevron-thin-right.svg);
+      background-size: cover;
 
       //Newer browsers - masks (better approach)
-      background-color: var(--color-primary);
-      mask-image: url(../img/chevron-thin-right.svg);
-      mask-size: cover;
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        background-color: var(--color-primary);
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
+
+        // if supported, then
+        background-image: none;
+      }
     }
   }
 }
