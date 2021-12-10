@@ -644,6 +644,23 @@
   align-items: center;
   border-bottom: var(--line-bottom);
 
+  @include respond(phone-small) {
+    height: auto;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    @include respond(phone-small) {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem 0;
+    }
+  }
+
   &__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -652,19 +669,36 @@
     padding: 1.5rem 3rem;
 
     @include respond(phone) {
-      font-size: 1.55rem;
+      font-size: 2.05rem;
     }
 
     @include respond(phone-small) {
-      font-size: 1.15rem;
-      padding-left: 2rem;
-      padding-right: 0.5rem;
+      padding: 0 0 0 2.25rem;
+      margin-right: 0;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+  }
+
+  &__star-loc {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone-small) {
+      padding-left: 2.25rem;
+      justify-content: flex-start;
+      gap: 2rem;
     }
   }
 
   &__stars {
     margin-right: auto;
     display: flex;
+    @include respond(phone-small) {
+      margin-right: 0;
+    }
   }
 
   &__icon-star,
@@ -677,10 +711,6 @@
       width: 1.25rem;
       height: 1.25rem;
     }
-    @include respond(phone-small) {
-      width: 1rem;
-      height: 1rem;
-    }
   }
 
   &__location {
@@ -690,10 +720,6 @@
   }
   &__icon-location {
     margin-right: 0.5rem;
-    @include respond(phone-small) {
-      display: none;
-      visibility: hidden;
-    }
   }
   &__rating {
     background-color: var(--color-primary);
@@ -708,7 +734,7 @@
     align-items: center;
 
     @include respond(phone) {
-      padding: 0 1rem;
+      padding: 0 2rem;
       margin-left: 1rem;
     }
 
@@ -718,7 +744,7 @@
       margin-bottom: -3px;
 
       @include respond(phone) {
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
     }
 
