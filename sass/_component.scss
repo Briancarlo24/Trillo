@@ -255,7 +255,8 @@
 
 .u-menu__container {
   max-height: 60rem;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: 999;
 }
 .u-menu__box {
